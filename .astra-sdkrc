@@ -1,0 +1,5 @@
+export OPENNI2_INCLUDE=/home/nakano/Downloads/OpenNI2/OpenNI-Linux-x64-2.3/Include
+export OPENNI2_REDIST=/home/nakano/Downloads/OpenNI2/OpenNI-Linux-x64-2.3/Redist
+export ASTRA_INCLUDE_DIR=/usr/include/astra-sdk
+export ASTRA_LIBRARIES=/usr/lib/astra-sdk
+export ASTRA_SDK=/usr/share/astra-sdk
