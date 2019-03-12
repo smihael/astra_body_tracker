@@ -16,7 +16,7 @@ find_package(catkin REQUIRED COMPONENTS
 )
 
 set(CMAKE_MODULE_PATH "$ENV{ASTRA_SDK}/samples/cmake/")
-#list(APPEND CMAKE_MODULE_PATH "$ENV{ASTRA_SDK}/samples/cmake/")
+#list(APPEND CMAKE_MODULE_PATH "/home/system/AstraSDK/samples/cmake/")
 set(ASTRA_SAMPLES_COMMON_DIR "$ENV{ASTRA_SDK}/samples/common/")
 
 MESSAGE( STATUS "AFTER:" )
@@ -27,7 +27,7 @@ endforeach(path)
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
-#find_package(astra-sdk REQUIRED)
+find_package(Astra REQUIRED)
 
 MESSAGE( STATUS "CMAKE_MODULE_PATH:         " ${CMAKE_MODULE_PATH} )
 MESSAGE( STATUS "ASTRA_SAMPLES_COMMON_DIR:  " ${ASTRA_SAMPLES_COMMON_DIR} )
@@ -135,8 +135,9 @@ catkin_package(
 ## Your package locations should be listed before other locations
 include_directories(
 # include
-  $ENV{ASTRA_INCLUDE_DIR}
-  $ENV{ASTRA_INCLUDE_DIR}/astra/capi
+#  /home/system/AstraSDK/samples/cmake/astra/capi
+  ${ASTRA_INCLUDE_DIR}
+  ${ASTRA_INCLUDE_DIR}/astra/capi
   ${ASTRA_SAMPLES_COMMON_DIR}
   ${catkin_INCLUDE_DIRS}
 )
